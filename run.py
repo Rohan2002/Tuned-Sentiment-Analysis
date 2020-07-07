@@ -6,6 +6,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='3'
 import tensorflow
 from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import string
 
 model = keras.models.load_model('./models/tuned_imdb.h5')
 
@@ -30,7 +31,8 @@ def encode(s):
             encoded.append(2)
     return encoded
 
-sentence_test = input ("Enter your review:") 
+sentence_test = input ("Enter your review:")
+sentence_test = sentence_test.translate(str.maketrans('', '', string.punctuation))
 real_encode = encode(sentence_test)
 real_padded = pad_sequences(
     [real_encode], maxlen=max_length, truncating=trun_type, value=word_mapping["<PAD>"]
