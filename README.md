@@ -1,5 +1,5 @@
-# Tuned-Sentiment-Analysis
-A hyper-paramter tuned sentiment analysis neural network with 86.15% Test accuracy on the IMDB Dataset from Keras Dataset.
+# Tuned-Sentiment-Analysis by Rohan Deshpande
+A hyper-paramter tuned sentiment analysis neural network with 86.15% Test accuracy on the IMDB Dataset from Keras Dataset. 
 
 ## Tuned Hyperparameters
 1. Dropout Regularization Rate
